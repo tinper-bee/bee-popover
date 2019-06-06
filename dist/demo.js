@@ -11559,11 +11559,11 @@
 	    /**
 	     * @private
 	     */
-	    onHide: _propTypes2["default"].oneOf([null]),
+	    onHide: _propTypes2["default"].func,
 	    /**
 	     * @private
 	     */
-	    show: _propTypes2["default"].oneOf([null])
+	    show: _propTypes2["default"].bool
 	});
 	
 	var defaultProps = {
@@ -33078,7 +33078,7 @@
 	    /**
 	     * @private
 	     */
-	    onHide: _propTypes2['default'].oneOf([null]),
+	    onHide: _propTypes2['default'].func,
 	    /**
 	     * @private
 	     */
@@ -33189,7 +33189,7 @@
 	
 	        var overlay = _react2['default'].createElement(
 	            _Content2['default'],
-	            _extends({ placement: props.placement }, confirmProps, { title: title }),
+	            _extends({ placement: props.placement }, confirmProps, { title: title, id: 'u-popover-content' }),
 	            content
 	        );
 	

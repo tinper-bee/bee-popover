@@ -120,7 +120,7 @@ var propTypes = _extends({}, _Overlay2["default"].propTypes, {
     /**
      * @private
      */
-    onHide: _propTypes2["default"].oneOf([null]),
+    onHide: _propTypes2["default"].func,
     /**
      * @private
      */
@@ -231,7 +231,7 @@ var Popover = function (_Component) {
 
         var overlay = _react2["default"].createElement(
             _Content2["default"],
-            _extends({ placement: props.placement }, confirmProps, { title: title }),
+            _extends({ placement: props.placement }, confirmProps, { title: title, id: 'u-popover-content' }),
             content
         );
 

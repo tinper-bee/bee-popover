@@ -78,7 +78,7 @@ const propTypes = {
     /**
      * @private
      */
-    onHide: PropTypes.oneOf([null]),
+    onHide: PropTypes.func,
     /**
      * @private
      */
@@ -199,7 +199,7 @@ class Popover extends Component{
         const childProps = child.props;
 
         let overlay = (
-            <Content placement={ props.placement } {...confirmProps} title={title}>
+            <Content placement={ props.placement } {...confirmProps} title={title} id="u-popover-content">
                 {content}
             </Content>
         );
