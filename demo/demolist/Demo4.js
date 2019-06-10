@@ -21,8 +21,8 @@ class Demo4 extends Component {
                     id="demo4"
                     placement="right"
                     trigger="click"
-                    positionTop={1050}
-                    positionLeft={106}
+                    // positionTop={1050}
+                    // positionLeft={106}
                     title={<p>消息</p>}
                     content={content}
                 >
