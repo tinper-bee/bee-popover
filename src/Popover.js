@@ -187,6 +187,7 @@ class Popover extends Component{
             positionLeft,
             rootClose,
             defaultOverlayShown,
+            container,
             ...props
         } = this.props;
 
