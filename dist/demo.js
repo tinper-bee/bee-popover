@@ -11363,7 +11363,14 @@
 	            overlay = _props2.overlay,
 	            inverse = _props2.inverse,
 	            trigger = _props2.trigger,
-	            others = _objectWithoutProperties(_props2, ['placement', 'id', 'arrowOffsetTop', 'arrowOffsetLeft', 'className', 'style', 'children', 'clsPrefix', 'overlay', 'inverse', 'trigger']);
+	            onVisibleChange = _props2.onVisibleChange,
+	            onHide = _props2.onHide,
+	            rootClose = _props2.rootClose,
+	            visible = _props2.visible,
+	            defaultOverlayShown = _props2.defaultOverlayShown,
+	            positionTop = _props2.positionTop,
+	            positionLeft = _props2.positionLeft,
+	            others = _objectWithoutProperties(_props2, ['placement', 'id', 'arrowOffsetTop', 'arrowOffsetLeft', 'className', 'style', 'children', 'clsPrefix', 'overlay', 'inverse', 'trigger', 'onVisibleChange', 'onHide', 'rootClose', 'visible', 'defaultOverlayShown', 'positionTop', 'positionLeft']);
 	
 	        var classes = (_classes = {}, _defineProperty(_classes, placement, true), _defineProperty(_classes, 'inverse', inverse), _classes);
 	
@@ -11388,30 +11395,38 @@
 	        });
 	        return 'visible' in this.props ? _react2["default"].createElement(
 	            _OverlayTrigger2["default"],
-	            _extends({
+	            _extends({}, others, {
 	                visible: this.state.visible,
 	                ref: function ref(_ref) {
 	                    return _this2.trigger = _ref;
 	                },
 	                shouldUpdatePosition: true,
-	                placement: placement
-	            }, others, {
+	                placement: placement,
 	                overlay: overlayNode,
-	                onHide: this.handleOnHide
+	                onHide: this.handleOnHide,
+	                rootClose: rootClose,
+	                defaultOverlayShown: defaultOverlayShown,
+	                positionTop: positionTop,
+	                positionLeft: positionLeft,
+	                trigger: trigger
 	            }),
 	            children
 	        ) : _react2["default"].createElement(
 	            _OverlayTrigger2["default"],
-	            _extends({
+	            _extends({}, others, {
 	                isHoverShow: this.state.isHoverShow,
 	                ref: function ref(_ref2) {
 	                    return _this2.trigger = _ref2;
 	                },
 	                shouldUpdatePosition: true,
-	                placement: placement
-	            }, others, {
+	                placement: placement,
 	                overlay: overlayNode,
-	                onHide: this.handleOnHide
+	                onHide: this.handleOnHide,
+	                rootClose: rootClose,
+	                defaultOverlayShown: defaultOverlayShown,
+	                positionTop: positionTop,
+	                positionLeft: positionLeft,
+	                trigger: trigger
 	            }),
 	            children
 	        );
@@ -37125,7 +37140,8 @@
 	            rootClose = _props.rootClose,
 	            defaultOverlayShown = _props.defaultOverlayShown,
 	            container = _props.container,
-	            props = _objectWithoutProperties(_props, ['id', 'clsPrefix', 'className', 'content', 'title', 'children', 'onClick', 'trigger', 'onBlur', 'onFocus', 'onMouseOut', 'onMouseOver', 'positionTop', 'positionLeft', 'rootClose', 'defaultOverlayShown', 'container']);
+	            show = _props.show,
+	            props = _objectWithoutProperties(_props, ['id', 'clsPrefix', 'className', 'content', 'title', 'children', 'onClick', 'trigger', 'onBlur', 'onFocus', 'onMouseOut', 'onMouseOver', 'positionTop', 'positionLeft', 'rootClose', 'defaultOverlayShown', 'container', 'show']);
 	
 	        delete props.delay;
 	        delete props.delayShow;
@@ -37170,7 +37186,7 @@
 	                overlay: this._overlay,
 	                trigger: trigger,
 	                placement: props.placement,
-	                container: props.container,
+	                container: container,
 	                positionTop: positionTop,
 	                positionLeft: positionLeft,
 	                rootClose: rootClose,

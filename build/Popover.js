@@ -215,7 +215,8 @@ var Popover = function (_Component) {
             rootClose = _props.rootClose,
             defaultOverlayShown = _props.defaultOverlayShown,
             container = _props.container,
-            props = _objectWithoutProperties(_props, ['id', 'clsPrefix', 'className', 'content', 'title', 'children', 'onClick', 'trigger', 'onBlur', 'onFocus', 'onMouseOut', 'onMouseOver', 'positionTop', 'positionLeft', 'rootClose', 'defaultOverlayShown', 'container']);
+            show = _props.show,
+            props = _objectWithoutProperties(_props, ['id', 'clsPrefix', 'className', 'content', 'title', 'children', 'onClick', 'trigger', 'onBlur', 'onFocus', 'onMouseOut', 'onMouseOver', 'positionTop', 'positionLeft', 'rootClose', 'defaultOverlayShown', 'container', 'show']);
 
         delete props.delay;
         delete props.delayShow;
@@ -260,7 +261,7 @@ var Popover = function (_Component) {
                 overlay: this._overlay,
                 trigger: trigger,
                 placement: props.placement,
-                container: props.container,
+                container: container,
                 positionTop: positionTop,
                 positionLeft: positionLeft,
                 rootClose: rootClose,

@@ -188,6 +188,7 @@ class Popover extends Component{
             rootClose,
             defaultOverlayShown,
             container,
+            show,
             ...props
         } = this.props;
 
@@ -231,7 +232,7 @@ class Popover extends Component{
             overlay={this._overlay} 
             trigger={trigger} 
             placement={props.placement} 
-            container={props.container}
+            container={container}
             positionTop={positionTop}
             positionLeft={positionLeft}
             rootClose={rootClose}
