@@ -182,11 +182,9 @@ var Popover = function (_Component) {
 
     Popover.prototype.componentDidMount = function componentDidMount() {
         this._mountNode = document.createElement('div');
-        !isReact16 && this.renderOverlay();
     };
 
     Popover.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {
-        !isReact16 && this.renderOverlay();
         if ('show' in this.props && prevProps.show !== this.props.show) {
             this.setState({
                 show: this.props.show
@@ -247,9 +245,6 @@ var Popover = function (_Component) {
 
         this._overlay = this.makeOverlay(overlay, overlayProps);
 
-        if (!isReact16) {
-            return (0, _react.cloneElement)(child, triggerProps);
-        }
         triggerProps.key = 'overlay';
 
         var portal = _react2["default"].createElement(

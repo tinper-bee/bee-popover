@@ -136,11 +136,9 @@ class Popover extends Component{
 
     componentDidMount() {
         this._mountNode = document.createElement('div');
-        !isReact16 && this.renderOverlay();
     }
 
     componentDidUpdate(prevProps) {
-        !isReact16 && this.renderOverlay();
         if ('show' in this.props && prevProps.show !== this.props.show) {
             this.setState({
                 show: this.props.show
@@ -218,9 +216,6 @@ class Popover extends Component{
 
         this._overlay = this.makeOverlay(overlay, overlayProps);
 
-        if (!isReact16) {
-            return cloneElement(child, triggerProps);
-        }
         triggerProps.key = 'overlay';
 
         let portal = (
