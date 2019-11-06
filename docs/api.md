@@ -29,10 +29,10 @@ import 'bee-popover/build/Popover.css';
 |positionTop|弹出框向上偏移量|string/number|-|
 |positionLeft|弹出框向左偏移量|string/number|-|
 |container|容器|ReactNode/function|body|
-|trigger|触发现实和隐藏的事件类型|click/hover/focus|hover|
+|trigger|触发现实和隐藏的事件类型|`click` / `hover` / `focus`|"hover"|
 |show|控制显示和隐藏，注意：需要和 onHide 事件结合使用|bool|-|
 |defaultOverlayShown|默认显示的状态|bool|false|
-|onHide|隐藏时的回调|function|-|
+|onHide|隐藏时的回调，点击热区之外的地方时触发|function|-|
 |onVisibleChange|显示状态改变时触发的回调|function|-|
 
 ## 注意事项
